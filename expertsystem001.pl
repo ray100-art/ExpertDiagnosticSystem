@@ -260,7 +260,7 @@ suggest_fix(slow_computer) :-
 % ASK — asks once, caches the answer
 % =========================================
 
-ask(Key, Question) :-
+ask(Key, _Question) :-
     answer(Key, _), !.        % Already answered — skip entirely
 ask(Key, Question) :-
     format(atom(Prompt), '~w? (yes/no): ', [Question]),
